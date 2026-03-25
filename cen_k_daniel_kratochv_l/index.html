@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="cs"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ceník a Platba | Academic Architect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#2e3132",
+              "on-tertiary-fixed-variant": "#005320",
+              "on-primary-container": "#ffffff",
+              "secondary-fixed": "#ffdbc8",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#edeeef",
+              "surface-tint": "#005bc0",
+              "surface-dim": "#d9dadb",
+              "surface-bright": "#f8f9fa",
+              "tertiary-container": "#008939",
+              "primary-fixed-dim": "#adc7ff",
+              "secondary-fixed-dim": "#ffb68b",
+              "tertiary-fixed": "#89fa9b",
+              "surface-variant": "#e1e3e4",
+              "error-container": "#ffdad6",
+              "secondary-container": "#fb7800",
+              "inverse-on-surface": "#f0f1f2",
+              "on-surface": "#191c1d",
+              "on-error-container": "#93000a",
+              "on-secondary": "#ffffff",
+              "surface": "#f8f9fa",
+              "error": "#ba1a1a",
+              "on-primary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#004493",
+              "on-secondary-fixed-variant": "#753400",
+              "on-tertiary-fixed": "#002108",
+              "on-error": "#ffffff",
+              "primary": "#005bbf",
+              "inverse-primary": "#adc7ff",
+              "on-background": "#191c1d",
+              "tertiary-fixed-dim": "#6ddd81",
+              "on-secondary-container": "#592600",
+              "tertiary": "#006d2c",
+              "background": "#f8f9fa",
+              "primary-fixed": "#d8e2ff",
+              "on-primary-fixed": "#001a41",
+              "outline": "#727785",
+              "surface-container-low": "#f3f4f5",
+              "surface-container-highest": "#e1e3e4",
+              "on-tertiary-container": "#ffffff",
+              "outline-variant": "#c1c6d6",
+              "surface-container-high": "#e7e8e9",
+              "secondary": "#994700",
+              "on-secondary-fixed": "#321200",
+              "primary-container": "#1a73e8",
+              "on-surface-variant": "#414754"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .pill-gradient {
+        background: linear-gradient(135deg, #994700 0%, #fb7800 100%);
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="text-2xl font-extrabold tracking-tighter text-slate-900 dark:text-slate-50 font-headline">Matematická akademie</div>
+<div class="hidden md:flex items-center space-x-8 font-manrope font-bold text-sm tracking-tight">
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors" href="#">Courses</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors" href="#">Exercises</a>
+<a class="text-blue-700 dark:text-blue-400 border-b-2 border-blue-700 dark:border-blue-400 pb-1" href="#">Pricing</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="px-5 py-2 text-sm font-bold text-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800/50 rounded-lg transition-all active:scale-95 duration-150">Login</button>
+<button class="px-6 py-2.5 bg-primary text-on-primary rounded-full text-sm font-bold shadow-md hover:shadow-lg transition-all active:scale-95">Register</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+<!-- Hero Header -->
+<header class="mb-20">
+<h1 class="font-headline font-extrabold text-5xl md:text-6xl tracking-tighter mb-6 max-w-3xl leading-tight">Investujte do matematického vzdělání v akademii <span class="text-primary">Mgr. Daniela Kratochvíla</span></h1>
+<p class="text-on-surface-variant text-lg max-w-2xl leading-relaxed">Získejte přístup k prémiovým kurzům matematiky pod vedením Mgr. Daniela Kratochvíla. Transparentní ceny, žádné skryté poplatky a 100% garance úspěchu u zkoušek.</p>
+</header>
+<!-- Pricing Section -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-24">
+<!-- Basic Plan -->
+<div class="bg-surface-container-low rounded-xl p-1 font-body">
+<div class="bg-surface-container-lowest rounded-lg p-10 h-full relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 bg-outline-variant h-full"></div>
+<div class="flex flex-col h-full">
+<span class="text-primary font-bold text-sm tracking-widest uppercase mb-4">Základní</span>
+<h2 class="font-headline font-bold text-3xl mb-6">Student Architect</h2>
+<div class="mb-8">
+<span class="text-5xl font-extrabold tracking-tight">490 Kč</span>
+<span class="text-on-surface-variant font-medium">/měsíc</span>
+</div>
+<ul class="space-y-4 mb-12 flex-grow">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary shrink-0" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Přístup k základní knihovně kurzů</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary shrink-0" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Interaktivní cvičení a kvízy</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary shrink-0" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Sledování studijního pokroku</span>
+</li>
+<li class="flex items-start gap-3 opacity-50">
+<span class="material-symbols-outlined shrink-0" data-icon="cancel">cancel</span>
+<span class="text-on-surface-variant line-through">Prioritní podpora 24/7</span>
+</li>
+</ul>
+<button class="w-full py-4 bg-primary-fixed text-on-primary-fixed font-bold rounded-full hover:bg-primary transition-all active:scale-95 hover:text-white">Vybrat Základní</button>
+</div>
+</div>
+</div>
+<!-- Premium Plan -->
+<div class="bg-surface-container-low rounded-xl p-1 font-body">
+<div class="bg-surface-container-lowest rounded-lg p-10 h-full relative overflow-hidden border-2 border-primary-container/20">
+<div class="absolute top-0 left-0 w-1 bg-primary h-full"></div>
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-secondary-container/10 rounded-full blur-2xl"></div>
+<div class="flex flex-col h-full">
+<div class="flex justify-between items-start mb-4">
+<span class="text-secondary font-bold text-sm tracking-widest uppercase">Prémiový</span>
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-xs font-bold rounded-full">DOPORUČENO</span>
+</div>
+<h2 class="font-headline font-bold text-3xl mb-6">Master Architect</h2>
+<div class="mb-8">
+<span class="text-5xl font-extrabold tracking-tight text-primary">990 Kč</span>
+<span class="text-on-surface-variant font-medium">/měsíc</span>
+</div>
+<ul class="space-y-4 mb-12 flex-grow">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary shrink-0" data-icon="verified">verified</span>
+<span class="text-on-surface font-semibold">Vše z plánu Student</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary shrink-0" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Neomezený přístup ke všem materiálům</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary shrink-0" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Individuální konzultace (1h/měsíc)</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary shrink-0" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Certifikát o absolvování kurzu</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary shrink-0" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Prioritní podpora 24/7</span>
+</li>
+</ul>
+<button class="w-full py-4 pill-gradient text-white font-bold rounded-full shadow-lg shadow-secondary/20 transition-all active:scale-95">Aktivovat Master Plán</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Payment Details & Trust Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Payment Instructions -->
+<section class="lg:col-span-7 bg-surface-container-low rounded-xl p-8 md:p-12">
+<h3 class="font-headline font-bold text-2xl mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="account_balance">account_balance</span>
+                    Platební instrukce
+                </h3>
+<div class="space-y-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between p-6 bg-surface-container-lowest rounded-lg">
+<span class="text-on-surface-variant text-sm font-medium uppercase tracking-wider mb-2 md:mb-0">Číslo účtu</span>
+<span class="font-headline font-bold text-xl text-primary">2000123456 / 2010</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col p-6 bg-surface-container-lowest rounded-lg">
+<span class="text-on-surface-variant text-sm font-medium uppercase tracking-wider mb-2">Variabilní symbol (VS)</span>
+<span class="font-headline font-bold text-xl">202400158</span>
+</div>
+<div class="flex flex-col p-6 bg-surface-container-lowest rounded-lg">
+<span class="text-on-surface-variant text-sm font-medium uppercase tracking-wider mb-2">Částka k úhradě</span>
+<span class="font-headline font-bold text-xl text-secondary">990 Kč</span>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<p class="text-sm font-medium text-on-surface-variant mb-6 uppercase tracking-widest">Podporované platební metody</p>
+<div class="flex flex-wrap gap-6 items-center grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all">
+<img alt="" class="h-6" data-alt="Official PayPal logo in characteristic blue color on transparent background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrio10hOdPl9pU5FbqFga0mxyY_0N5UxoI0hQ7UvDklX2Y7HsCmdpQoQ_q50fzlq3LIThRRfvLU3krkgYNCoAs3yX31Qt7BG6QWAjMvJmwMHm49Z1dZydZnRWmiZN5OMxvriHtt3N9q8BeTQqQHpdyqNnBvrqQzeWr6p23PBFKNL2qKPHLPXU56MlocmqT7GdXwqnpRvHeepnSpRFjKmWwWOsKAo_egElnsVBqt4FUk-8m8yOxyuRfd-f0ccNqJk6udwBx2--Rg7w"/>
+<img alt="" class="h-4" data-alt="Official Visa logo in dark blue color minimal design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyeIePwU4_1sO5mdtiHIcED70Nd1f-oy9EDlk0S-8Zl4IyjNX93fgoD82jU2PQkaRCDewmUAjvF24oukze5hTTH7EKffQ-hFlybcWBhu9LEVNUHwPVCsmhMNH9MkzAG3DXY-cn0i8sK0dgdEG0kcOmWUjMss2fQ2N-WJcspx6uJFVG9nIby0jyP6CIu1QMX_ZWKCCi_zZJx3IflYbRlUfrE-YLbzWvh9aTNrfGwbEwNLxyLBl0kH-qNTSQ3ShpYdnyNxq1LaCo12c"/>
+<img alt="" class="h-8" data-alt="Official Mastercard logo with orange and red interlocking circles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqQlLIdR88RolfXom-C5v1iERd2Kvhyk8epeVBVuTgo4AA3d1wGWYyEjPS7sNEHyWeU1LXU7-MwjKWMQFezJFH3jjL_XrzM8oIRyDd9M2pfQfYG3Aq52EdzVZ2twIuhlJCuQnL7bhlI4HA8GFJP2Z3a6JQTbwgyfk2JkIIku_luhyjOvuHhyLR0KV9_Y5dK6wpUZ2PZlxbKyg9rxEsQLQWnaNM7widmHIRY8EOPEd74XJ8pVBBRfLh-RhHY9wE6thrFR_D5XUCwY0"/>
+<img alt="" class="h-6" data-alt="Official Apple Pay logo in black minimal vector style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVyC2X13UhUqVGRVTXrdwLcsxxvjNJm_TRfu4ECRtaE_SgVoDOPa4E1KV9h0lQC_9POVC5u5p2MLvWvRdi0O_Q90x_rOL-zvmnkRacCVwOb9KVpRoAQTHpPD7VNNekKecUuxZJC9h5jvnGtj8bwoZRuP7NKY1lr9btJwIRQzcpe1HAwao1alsYsuGTbWIJ68yyvjGfUiIGLTYj01D_6bUh31at0wsxLktiVxm40pn7mHeYaPpO9lfbk2S7medqTG4alE83ZZl2Wuc"/>
+</div>
+</div>
+</section>
+<!-- Conditions & Trust Badges -->
+<aside class="lg:col-span-5 space-y-8">
+<!-- Trust Badges -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-3" data-icon="lock" data-weight="fill">lock</span>
+<span class="text-sm font-bold leading-tight">Zabezpečený přenos dat</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-3" data-icon="security" data-weight="fill">security</span>
+<span class="text-sm font-bold leading-tight">Certifikovaná brána</span>
+</div>
+</div>
+<!-- Conditions Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 p-8 rounded-xl shadow-sm">
+<h4 class="font-headline font-bold text-xl mb-6">Podmínky a Garance</h4>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary shrink-0" data-icon="rocket_launch">rocket_launch</span>
+<div>
+<p class="font-bold text-sm mb-1">Okamžitý start</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">Při platbě kartou nebo online bránou získáte přístup ihned po potvrzení transakce.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary shrink-0" data-icon="assignment_return">assignment_return</span>
+<div>
+<p class="font-bold text-sm mb-1">Vrácení platby</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">Nejste spokojeni? Do 14 dnů od nákupu vám vrátíme peníze bez zbytečných otázek.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary shrink-0" data-icon="info">info</span>
+<div>
+<p class="font-bold text-sm mb-1">Důležité info</p>
+<p class="text-on-surface-variant text-sm leading-relaxed">Bankovní převod může trvat 1-2 pracovní dny. Pro rychlejší aktivaci použijte platební kartu.</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto px-6 font-inter text-sm leading-relaxed">
+<div class="space-y-4">
+<div class="text-xl font-bold text-slate-900 dark:text-slate-50 font-headline">Matematická akademie Mgr. Daniela Kratochvíla</div>
+<p class="text-slate-500 dark:text-slate-400">Váš průvodce světem matematiky s odborným vedením Mgr. Daniela Kratochvíla.</p>
+</div>
+<div class="flex flex-col space-y-3">
+<span class="font-bold text-slate-900 dark:text-slate-50 mb-2">Platforma</span>
+<a class="text-slate-500 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors" href="#">Courses</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors" href="#">Exercises</a>
+<a class="text-blue-600 dark:text-blue-400 font-semibold" href="#">Pricing</a>
+</div>
+<div class="flex flex-col space-y-3">
+<span class="font-bold text-slate-900 dark:text-slate-50 mb-2">Podpora</span>
+<a class="text-slate-500 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors" href="#">Help Center</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors" href="#">Contact Support</a>
+</div>
+<div class="flex flex-col space-y-3">
+<span class="font-bold text-slate-900 dark:text-slate-50 mb-2">Právní</span>
+<a class="text-slate-500 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors" href="#">Terms of Service</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors" href="#">Privacy Policy</a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 text-center">
+<p class="text-slate-500 dark:text-slate-400">© 2024 Matematická akademie Mgr. Daniela Kratochvíla. Všechna práva vyhrazena.</p>
+</div>
+</footer>
+</body></html>

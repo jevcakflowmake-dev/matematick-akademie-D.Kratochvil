@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="light" lang="cs"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#2e3132",
+              "on-tertiary-fixed-variant": "#005320",
+              "on-primary-container": "#ffffff",
+              "secondary-fixed": "#ffdbc8",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#edeeef",
+              "surface-tint": "#005bc0",
+              "surface-dim": "#d9dadb",
+              "surface-bright": "#f8f9fa",
+              "tertiary-container": "#008939",
+              "primary-fixed-dim": "#adc7ff",
+              "secondary-fixed-dim": "#ffb68b",
+              "tertiary-fixed": "#89fa9b",
+              "surface-variant": "#e1e3e4",
+              "error-container": "#ffdad6",
+              "secondary-container": "#fb7800",
+              "inverse-on-surface": "#f0f1f2",
+              "on-surface": "#191c1d",
+              "on-error-container": "#93000a",
+              "on-secondary": "#ffffff",
+              "surface": "#f8f9fa",
+              "error": "#ba1a1a",
+              "on-primary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#004493",
+              "on-secondary-fixed-variant": "#753400",
+              "on-tertiary-fixed": "#002108",
+              "on-error": "#ffffff",
+              "primary": "#005bbf",
+              "inverse-primary": "#adc7ff",
+              "on-background": "#191c1d",
+              "tertiary-fixed-dim": "#6ddd81",
+              "on-secondary-container": "#592600",
+              "tertiary": "#006d2c",
+              "background": "#f8f9fa",
+              "primary-fixed": "#d8e2ff",
+              "on-primary-fixed": "#001a41",
+              "outline": "#727785",
+              "surface-container-low": "#f3f4f5",
+              "surface-container-highest": "#e1e3e4",
+              "on-tertiary-container": "#ffffff",
+              "outline-variant": "#c1c6d6",
+              "surface-container-high": "#e7e8e9",
+              "secondary": "#994700",
+              "on-secondary-fixed": "#321200",
+              "primary-container": "#1a73e8",
+              "on-surface-variant": "#414754"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px);
+        }
+        .cta-gradient {
+            background: linear-gradient(135deg, #994700 0%, #fb7800 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar - Suppression Rule: Login/Signup pages usually hide main nav, but requirements specify branding consistency -->
+<header class="fixed top-0 w-full z-50 glass-header shadow-sm h-20">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-full">
+<div class="text-2xl font-extrabold tracking-tighter text-slate-900">Academic Architect</div>
+<div class="flex gap-4">
+<a class="font-manrope font-bold text-sm tracking-tight text-slate-600 hover:text-slate-900 transition-colors" href="#">Zpět na hlavní stránku</a>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-20 min-h-screen flex items-center justify-center px-6">
+<div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+<!-- Registration Section (Left) -->
+<section class="space-y-8">
+<div class="space-y-2">
+<h1 class="font-headline font-extrabold text-4xl tracking-tight text-on-surface">Vytvořit účet</h1>
+<p class="text-on-surface-variant body-md">Začněte svou cestu k akademickému úspěchu ještě dnes.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border-l-4 border-primary">
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="block font-label text-sm font-medium text-on-surface-variant">E-mailová adresa</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline-variant" placeholder="vas@email.cz" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="block font-label text-sm font-medium text-on-surface-variant">Heslo</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline-variant" placeholder="••••••••" type="password"/>
+</div>
+<div class="space-y-2">
+<label class="block font-label text-sm font-medium text-on-surface-variant">Potvrdit heslo</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline-variant" placeholder="••••••••" type="password"/>
+</div>
+<button class="w-full cta-gradient text-white font-bold py-4 rounded-full shadow-md hover:opacity-90 transition-all active:scale-95" type="submit">
+                            Registrovat se
+                        </button>
+</form>
+<div class="mt-8">
+<div class="relative flex items-center py-4">
+<div class="flex-grow border-t border-outline-variant opacity-20"></div>
+<span class="flex-shrink mx-4 text-on-surface-variant text-xs font-bold uppercase tracking-widest">Nebo pokračujte přes</span>
+<div class="flex-grow border-t border-outline-variant opacity-20"></div>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-6">
+<button class="flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-surface-container-high hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-xl" data-icon="account_circle">account_circle</span>
+<span class="text-sm font-semibold">Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-surface-container-high hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-xl" data-icon="facebook">social_leaderboard</span>
+<span class="text-sm font-semibold">Facebook</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Login Section (Right) -->
+<section class="space-y-8 md:mt-0">
+<div class="space-y-2">
+<h2 class="font-headline font-extrabold text-4xl tracking-tight text-on-surface">Přihlášení</h2>
+<p class="text-on-surface-variant body-md">Vítejte zpět, pokračujte ve svém studiu.</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border-l-4 border-primary">
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="block font-label text-sm font-medium text-on-surface-variant">E-mailová adresa</label>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline-variant" placeholder="vas@email.cz" type="email"/>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between">
+<label class="block font-label text-sm font-medium text-on-surface-variant">Heslo</label>
+<a class="text-sm text-primary hover:underline" href="#">Zapomenuté heslo?</a>
+</div>
+<input class="w-full px-4 py-3 rounded-lg bg-surface-container-low border-none focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline-variant" placeholder="••••••••" type="password"/>
+</div>
+<button class="w-full bg-primary-container text-white font-bold py-4 rounded-full shadow-md hover:opacity-90 transition-all active:scale-95" type="submit">
+                                Přihlásit se
+                            </button>
+</form>
+<div class="mt-8 space-y-4">
+<button class="w-full flex items-center justify-center gap-3 py-3 px-4 rounded-full border border-outline-variant hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined" data-icon="login">login</span>
+<span class="text-sm font-semibold">Přihlásit se přes Google</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Decorative Element: Achievement Preview -->
+<div class="hidden md:block bg-surface-container-high/50 p-6 rounded-xl space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<div>
+<p class="font-bold text-sm">Již 5,000+ studentů</p>
+<p class="text-xs text-on-surface-variant">dosáhlo svých cílů s Academic Architect</p>
+</div>
+</div>
+<div class="flex gap-2">
+<div class="h-1 w-full bg-tertiary rounded-full"></div>
+<div class="h-1 w-full bg-tertiary rounded-full"></div>
+<div class="h-1 w-full bg-tertiary rounded-full"></div>
+<div class="h-1 w-full bg-outline-variant/30 rounded-full"></div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-slate-200 bg-slate-50">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto px-6">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-bold text-slate-900 mb-4">Academic Architect</div>
+<p class="text-slate-500 font-inter text-sm leading-relaxed">Moderní platforma pro náročné studenty, kteří chtějí dosáhnout víc.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-sm text-slate-900">Podpora</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 hover:text-orange-600 transition-colors text-sm" href="#">Centrum nápovědy</a></li>
+<li><a class="text-slate-500 hover:text-orange-600 transition-colors text-sm" href="#">Kontaktujte podporu</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-sm text-slate-900">Právní informace</h4>
+<ul class="space-y-2">
+<li><a class="text-slate-500 hover:text-orange-600 transition-colors text-sm" href="#">Podmínky služby</a></li>
+<li><a class="text-slate-500 hover:text-orange-600 transition-colors text-sm" href="#">Ochrana soukromí</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-sm text-slate-900">Sledujte nás</h4>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-primary transition-colors" data-icon="share">share</span>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-primary transition-colors" data-icon="groups">groups</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-200 text-center text-slate-500 text-sm">
+            © 2024 Academic Architect. Všechna práva vyhrazena.
+        </div>
+</footer>
+</body></html>

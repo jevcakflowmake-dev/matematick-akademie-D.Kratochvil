@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="light" lang="cs"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#2e3132",
+              "on-tertiary-fixed-variant": "#005320",
+              "on-primary-container": "#ffffff",
+              "secondary-fixed": "#ffdbc8",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#edeeef",
+              "surface-tint": "#005bc0",
+              "surface-dim": "#d9dadb",
+              "surface-bright": "#f8f9fa",
+              "tertiary-container": "#008939",
+              "primary-fixed-dim": "#adc7ff",
+              "secondary-fixed-dim": "#ffb68b",
+              "tertiary-fixed": "#89fa9b",
+              "surface-variant": "#e1e3e4",
+              "error-container": "#ffdad6",
+              "secondary-container": "#fb7800",
+              "inverse-on-surface": "#f0f1f2",
+              "on-surface": "#191c1d",
+              "on-error-container": "#93000a",
+              "on-secondary": "#ffffff",
+              "surface": "#f8f9fa",
+              "error": "#ba1a1a",
+              "on-primary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#004493",
+              "on-secondary-fixed-variant": "#753400",
+              "on-tertiary-fixed": "#002108",
+              "on-error": "#ffffff",
+              "primary": "#005bbf",
+              "inverse-primary": "#adc7ff",
+              "on-background": "#191c1d",
+              "tertiary-fixed-dim": "#6ddd81",
+              "on-secondary-container": "#592600",
+              "tertiary": "#006d2c",
+              "background": "#f8f9fa",
+              "primary-fixed": "#d8e2ff",
+              "on-primary-fixed": "#001a41",
+              "outline": "#727785",
+              "surface-container-low": "#f3f4f5",
+              "surface-container-highest": "#e1e3e4",
+              "on-tertiary-container": "#ffffff",
+              "outline-variant": "#c1c6d6",
+              "surface-container-high": "#e7e8e9",
+              "secondary": "#994700",
+              "on-secondary-fixed": "#321200",
+              "primary-container": "#1a73e8",
+              "on-surface-variant": "#414754"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="text-2xl font-extrabold tracking-tighter text-slate-900 dark:text-slate-50">
+                Academic Architect
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-blue-700 font-manrope font-bold text-sm tracking-tight border-b-2 border-blue-700 pb-1" href="#">Courses</a>
+<a class="text-slate-600 font-manrope font-bold text-sm tracking-tight hover:text-slate-900 transition-colors" href="#">Exercises</a>
+<a class="text-slate-600 font-manrope font-bold text-sm tracking-tight hover:text-slate-900 transition-colors" href="#">Pricing</a>
+<a class="text-slate-600 font-manrope font-bold text-sm tracking-tight hover:text-slate-900 transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-5 py-2.5 text-sm font-bold font-manrope text-slate-600 hover:bg-slate-50 rounded-lg transition-all">Login</button>
+<button class="px-6 py-2.5 bg-secondary hover:bg-secondary-container text-white text-sm font-bold font-manrope rounded-full transition-all shadow-md">Register</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-24 max-w-7xl mx-auto px-6">
+<!-- Breadcrumb / Header -->
+<div class="mb-10">
+<div class="flex items-center gap-2 text-sm text-on-surface-variant font-label mb-4">
+<span>Kurzy</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span>Matematika pro 9. třídu</span>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-semibold">Funkce a grafy</span>
+</div>
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface">Lineární funkce: Úvod a definice</h1>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Video & Details Column -->
+<div class="lg:col-span-8 space-y-10">
+<!-- Hero Video Player Section -->
+<div class="relative group">
+<div class="aspect-video w-full rounded-xl overflow-hidden bg-slate-900 shadow-2xl ring-1 ring-white/10 flex items-center justify-center relative">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60" data-alt="Modern high-resolution mathematical visualization on a dark digital screen with glowing geometric lines and elegant typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByAc-AMWMeN6OJg87Yez19V_9aDkwm0npssA2YNMINQwS63samUvtU5tRNV0jTYuPCeUADBYvgzrSU7kyxDLmX7nVnB4by7k2HNQDwJA5LihOUXH9Ww4N45untG_LhPLjITGFwyM79HkC__6nCDQ8fB95eB6xcHqPUBaCJNXmOCoNF-GYqElZX_hu1IfRuFjuA1uAY1AOp_kPdVUIJRI4rAmeMgBeMea3LyIlb7Op7XkHo5Aq60z1RNRVmMVyZCIk5UFZph4HYQcY"/>
+<button class="z-10 w-24 h-24 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 hover:scale-110 transition-transform group-hover:bg-secondary-container group-hover:border-transparent">
+<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<!-- Custom Video Controls Overlay -->
+<div class="absolute bottom-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent flex items-center justify-between">
+<div class="flex items-center gap-4 text-white">
+<span class="material-symbols-outlined cursor-pointer">pause</span>
+<span class="material-symbols-outlined cursor-pointer">volume_up</span>
+<span class="text-xs font-mono">12:45 / 24:00</span>
+</div>
+<div class="flex-1 mx-8 h-1 bg-white/20 rounded-full overflow-hidden">
+<div class="w-1/2 h-full bg-secondary"></div>
+</div>
+<div class="flex items-center gap-4 text-white">
+<span class="material-symbols-outlined cursor-pointer">settings</span>
+<span class="material-symbols-outlined cursor-pointer">fullscreen</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Bar Below Video -->
+<div class="flex flex-wrap items-center justify-between gap-6 py-2 border-b border-outline-variant/20 pb-8">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5 px-4 py-2 bg-tertiary/10 text-tertiary rounded-full text-sm font-semibold">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Splněno</span>
+</div>
+<div class="flex items-center gap-1.5 px-4 py-2 bg-primary/5 text-primary rounded-full text-sm font-semibold">
+<span class="material-symbols-outlined text-lg">schedule</span>
+<span>24 minut</span>
+</div>
+</div>
+<button class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-br from-secondary to-secondary-container text-white font-headline font-bold rounded-full shadow-lg hover:shadow-secondary/20 hover:scale-[1.02] active:scale-95 transition-all">
+                        Přejít na procvičování
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Description & Materials Tabs -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<section>
+<h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">subject</span>
+                            O lekci
+                        </h2>
+<p class="text-on-surface-variant leading-relaxed mb-4">
+                            V této lekci se podíváme na základní stavební kameny lineárních funkcí. Naučíme se, jak identifikovat lineární závislost, co znamenají koeficienty <span class="font-mono text-primary italic">a</span> a <span class="font-mono text-primary italic">b</span>, a jak sestrojit graf z předpisu.
+                        </p>
+<ul class="space-y-3">
+<li class="flex items-start gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary mt-0.5" style="font-variation-settings: 'FILL' 1;">check_small</span>
+                                Definice lineární funkce a její obor hodnot.
+                            </li>
+<li class="flex items-start gap-3 text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary mt-0.5" style="font-variation-settings: 'FILL' 1;">check_small</span>
+                                Vliv koeficientu sklonu na směr přímky.
+                            </li>
+</ul>
+</section>
+<section>
+<h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">download</span>
+                            Materiály ke stažení
+                        </h2>
+<div class="space-y-3">
+<a class="group flex items-center justify-between p-4 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-error/10 text-error flex items-center justify-center">
+<span class="material-symbols-outlined">picture_as_pdf</span>
+</div>
+<div>
+<div class="font-semibold text-sm group-hover:text-primary transition-colors">Pracovní list: Grafy funkcí</div>
+<div class="text-xs text-on-surface-variant">PDF, 2.4 MB</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-y-0.5 transition-transform">download_for_offline</span>
+</a>
+<a class="group flex items-center justify-between p-4 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors" href="#">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined">table_chart</span>
+</div>
+<div>
+<div class="font-semibold text-sm group-hover:text-primary transition-colors">Tahák: Vzorce a definice</div>
+<div class="text-xs text-on-surface-variant">PDF, 1.1 MB</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-y-0.5 transition-transform">download_for_offline</span>
+</a>
+</div>
+</section>
+</div>
+</div>
+<!-- Sidebar Column -->
+<aside class="lg:col-span-4 space-y-6">
+<div class="bg-surface-container-low rounded-xl p-6 border-l-4 border-primary">
+<div class="flex justify-between items-end mb-6">
+<div>
+<h3 class="text-xs font-bold uppercase tracking-widest text-primary mb-1">Modul 3</h3>
+<h2 class="text-lg font-bold">Lineární funkce</h2>
+</div>
+<span class="text-xs font-semibold text-on-surface-variant">4/8 lekcí</span>
+</div>
+<!-- Progress Tracker Micro-component -->
+<div class="flex gap-1.5 mb-8">
+<div class="flex-1 h-1.5 rounded-full bg-tertiary"></div>
+<div class="flex-1 h-1.5 rounded-full bg-tertiary"></div>
+<div class="flex-1 h-1.5 rounded-full bg-tertiary"></div>
+<div class="flex-1 h-1.5 rounded-full bg-tertiary"></div>
+<div class="flex-1 h-1.5 rounded-full bg-outline-variant/30"></div>
+<div class="flex-1 h-1.5 rounded-full bg-outline-variant/30"></div>
+<div class="flex-1 h-1.5 rounded-full bg-outline-variant/30"></div>
+<div class="flex-1 h-1.5 rounded-full bg-outline-variant/30"></div>
+</div>
+<!-- Video List -->
+<div class="space-y-2">
+<!-- List Item: Completed -->
+<div class="p-3 flex items-center gap-4 rounded-lg bg-surface-container-high/50 hover:bg-surface-container-high transition-all cursor-pointer">
+<div class="relative w-20 aspect-video rounded-md overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Blurred mathematics notebook with handwritten equations and geometric sketches, educational soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE833AQqoiAWy7fB8E8PAxCKwBGZUzu64qNZfmBOvmmKY8VzjCHjdDER1sTCVos42kBxWB-yVSqHLvcMPwvDMMMO57NRYK1YlLCv9n7eP0IiumRmfWhJqXnlOyR2z6abmShrwraGJgP3fyCDczuLXJu_Uam0FiUlDadaKyLYzfzQ0TPBEUVYIm4gnMGjEus37S3sL9bxElQaIX4oa1LRBHPfYBTf_9vM8czN1VYINsOjqQjvblJUFKZjZupMiOUkqTxy79M0uENb0"/>
+<div class="absolute inset-0 bg-tertiary/60 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<div class="min-w-0">
+<div class="text-xs font-medium text-on-surface-variant">1. Opakování základů</div>
+<div class="text-xs text-on-surface-variant">12:15</div>
+</div>
+</div>
+<!-- List Item: Active -->
+<div class="p-3 flex items-center gap-4 rounded-lg bg-surface-container-lowest shadow-sm border border-primary/10 ring-1 ring-primary/20 cursor-default">
+<div class="relative w-20 aspect-video rounded-md overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close-up of a digital screen showing linear graphs and coordinate systems, professional scholarly aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3XhTEAlBIAmvPZwsAMqOX-6VNXuCOxJX33SVaPVhW7huRd8vGzaxrtu0eOU8S05IIjwrYk218iMUfhA2znJJ9RbRIRANiUHbwuMndIlFRRoOQAfh8TnMIWa6JPsDYbBOQvfiYklrZC6A4fJAUOsPUD90mg3h84CQCjE_AwDF16hw0ABOQDQ_Pxv7ciNDq53JoVZdCXdUWJb-SZjSdXdyE4qmlbniuUmzHqmZ4ks2uyZ_RG0tT0dazOAOmlOcLb-uNdJwVMrsPDXI"/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white animate-pulse" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="min-w-0">
+<div class="text-xs font-bold text-primary">2. Úvod a definice</div>
+<div class="text-[10px] font-bold uppercase text-primary-container">Právě sledujete</div>
+</div>
+</div>
+<!-- List Item: Next -->
+<div class="p-3 flex items-center gap-4 rounded-lg hover:bg-surface-container-high transition-all cursor-pointer">
+<div class="relative w-20 aspect-video rounded-md overflow-hidden flex-shrink-0 bg-slate-200">
+<img class="w-full h-full object-cover opacity-50 grayscale" data-alt="High-end educational setting with minimalist desk and open laptop showing mathematical software" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgfQ_x4t3mtqWEiAt3PRrjJXTkm4cQK-_5bmBzQQvh1EL4mVq40Ay1TRPlnNvnib2mzh59BEKXJt-tsuUyGrwXTVWp3wbWU1rq0hMrt29Kvs-SWX7fZMaH5kYyJ1chI6VV2IWq-1QQM6QnvrZnLE0gxPZJBSvvSabRErDn4_W_6ag14Va0PJsHJgK40E7bM6J_EzS0d-c1KhcF8FKWoh8dl0wQ57KIsN5xBC5vNTNq5aKYoa4aUnupVhtQzYD-kWxdaX4Vw7Rw2Gg"/>
+<div class="absolute inset-0 flex items-center justify-center text-white">
+<span class="material-symbols-outlined">lock</span>
+</div>
+</div>
+<div class="min-w-0">
+<div class="text-xs font-medium text-on-surface">3. Výpočet průsečíků</div>
+<div class="text-xs text-on-surface-variant">18:40</div>
+</div>
+</div>
+<!-- List Item: Locked -->
+<div class="p-3 flex items-center gap-4 rounded-lg hover:bg-surface-container-high transition-all cursor-pointer opacity-60">
+<div class="relative w-20 aspect-video rounded-md overflow-hidden flex-shrink-0 bg-slate-200">
+<img class="w-full h-full object-cover opacity-50 grayscale" data-alt="Hand writing complex algebra formulas on clean white paper with a fountain pen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEzs5TS_JQcgtTHqmS2p-M_o0WXRny0nm8dU1ioH2U5dAP_ejEbecaqBOreFoaKtcb1SUZdDRBdAyRLUYO9Od0FdpJUUlX2awwoLAVaLP4qs-o_yeo7xgCE8hsmVpgwVqLFgtMODhNRW23IjoG4byRFKTjxCzenFj3X-EVfPe1g4mhwwtlJAdnWwABFCkWgUD0DHz5Nt4TM0Er9UTcj9vd18O3qvJTOIJtDzUmhvnO6u5IdZWJX6ZTAF_d-luyIErDAD_Gna9H5FY"/>
+<div class="absolute inset-0 flex items-center justify-center text-white">
+<span class="material-symbols-outlined">lock</span>
+</div>
+</div>
+<div class="min-w-0">
+<div class="text-xs font-medium text-on-surface">4. Vlastnosti funkce</div>
+<div class="text-xs text-on-surface-variant">15:10</div>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 py-3 rounded-lg border-2 border-primary/20 text-primary font-bold text-sm hover:bg-primary hover:text-white transition-all">
+                        Zobrazit celý plán modulu
+                    </button>
+</div>
+<!-- Teacher Card / Support -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-primary-fixed">
+<img class="w-full h-full object-cover" data-alt="Portrait of a professional female academic educator in a scholarly setting with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtyCxRWYM8Cs7AASUmZTzT492_cuyM1YAGf42qQEyzGWnPIjC5TddNBQhkchqWtp_QWGEd1L83V4xCn6vt0oxqH762Z8lrv0VvmRjU89qiz4gJDUQ8b2dSEae9Q-FAZBFwy22LUhtmAchLF-TS-9E3fxpiFVZ-ACBlkbfLpnJf4XiYimAO88T5qXI6ySLNr7x67j35Mxfco69b7laT2L8MQFqSRI97ZYeo8OBV7rkcNnPItXqEO6F7Rom4_8tONL0Cu0gRj0QPNrQ"/>
+</div>
+<div>
+<div class="text-sm font-bold">Mgr. Petra Svobodová</div>
+<div class="text-xs text-on-surface-variant">Garant kurzu Matematika</div>
+</div>
+<button class="ml-auto w-10 h-10 flex items-center justify-center text-primary-container bg-primary-fixed/30 rounded-full hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined">chat</span>
+</button>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer Section -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto px-6">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-4">Academic Architect</div>
+<p class="font-inter text-sm leading-relaxed text-slate-500 dark:text-slate-400">
+                    Nástroje pro moderní studium a úspěšné zvládnutí zkoušek. Navrženo pro novou generaci studentů.
+                </p>
+</div>
+<div>
+<h4 class="font-manrope font-bold text-sm text-slate-900 dark:text-slate-50 mb-4">Studium</h4>
+<ul class="space-y-2">
+<li><a class="font-inter text-sm text-slate-500 dark:text-slate-400 hover:text-orange-600 transition-colors" href="#">Nabídka kurzů</a></li>
+<li><a class="font-inter text-sm text-slate-500 dark:text-slate-400 hover:text-orange-600 transition-colors" href="#">Příprava na přijímačky</a></li>
+<li><a class="font-inter text-sm text-slate-500 dark:text-slate-400 hover:text-orange-600 transition-colors" href="#">Maturitní okruhy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-manrope font-bold text-sm text-slate-900 dark:text-slate-50 mb-4">Podpora</h4>
+<ul class="space-y-2">
+<li><a class="font-inter text-sm text-slate-500 dark:text-slate-400 hover:text-orange-600 transition-colors" href="#">Centrum nápovědy</a></li>
+<li><a class="font-inter text-sm text-slate-500 dark:text-slate-400 hover:text-orange-600 transition-colors" href="#">Kontaktujte nás</a></li>
+<li><a class="font-inter text-sm text-slate-500 dark:text-slate-400 hover:text-orange-600 transition-colors" href="#">Obchodní podmínky</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-manrope font-bold text-sm text-slate-900 dark:text-slate-50 mb-4">Odebírejte novinky</h4>
+<div class="flex gap-2">
+<input class="flex-1 bg-white dark:bg-slate-900 border-none rounded-lg px-4 py-2 text-sm shadow-inner ring-1 ring-slate-200 dark:ring-slate-800 focus:ring-primary transition-all" placeholder="Email" type="email"/>
+<button class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-bold"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-inter text-sm text-slate-500 dark:text-slate-400">© 2024 Academic Architect. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">smart_display</span></a>
+</div>
+</div>
+</footer>
+</body></html>

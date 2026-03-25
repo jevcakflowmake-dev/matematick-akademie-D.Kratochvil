@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="light" lang="cs"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#2e3132",
+              "on-tertiary-fixed-variant": "#005320",
+              "on-primary-container": "#ffffff",
+              "secondary-fixed": "#ffdbc8",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#edeeef",
+              "surface-tint": "#005bc0",
+              "surface-dim": "#d9dadb",
+              "surface-bright": "#f8f9fa",
+              "tertiary-container": "#008939",
+              "primary-fixed-dim": "#adc7ff",
+              "secondary-fixed-dim": "#ffb68b",
+              "tertiary-fixed": "#89fa9b",
+              "surface-variant": "#e1e3e4",
+              "error-container": "#ffdad6",
+              "secondary-container": "#fb7800",
+              "inverse-on-surface": "#f0f1f2",
+              "on-surface": "#191c1d",
+              "on-error-container": "#93000a",
+              "on-secondary": "#ffffff",
+              "surface": "#f8f9fa",
+              "error": "#ba1a1a",
+              "on-primary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#004493",
+              "on-secondary-fixed-variant": "#753400",
+              "on-tertiary-fixed": "#002108",
+              "on-error": "#ffffff",
+              "primary": "#005bbf",
+              "inverse-primary": "#adc7ff",
+              "on-background": "#191c1d",
+              "tertiary-fixed-dim": "#6ddd81",
+              "on-secondary-container": "#592600",
+              "tertiary": "#006d2c",
+              "background": "#f8f9fa",
+              "primary-fixed": "#d8e2ff",
+              "on-primary-fixed": "#001a41",
+              "outline": "#727785",
+              "surface-container-low": "#f3f4f5",
+              "surface-container-highest": "#e1e3e4",
+              "on-tertiary-container": "#ffffff",
+              "outline-variant": "#c1c6d6",
+              "surface-container-high": "#e7e8e9",
+              "secondary": "#994700",
+              "on-secondary-fixed": "#321200",
+              "primary-container": "#1a73e8",
+              "on-surface-variant": "#414754"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px);
+        }
+        .cta-gradient {
+            background: linear-gradient(135deg, #994700 0%, #fb7800 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="text-2xl font-extrabold tracking-tighter text-slate-900 dark:text-slate-50">Academic Architect</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-manrope font-bold text-sm tracking-tight text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors" href="#">Courses</a>
+<a class="font-manrope font-bold text-sm tracking-tight text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors" href="#">Exercises</a>
+<a class="font-manrope font-bold text-sm tracking-tight text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors" href="#">Pricing</a>
+<a class="font-manrope font-bold text-sm tracking-tight text-blue-700 dark:text-blue-400 border-b-2 border-blue-700 dark:border-blue-400 pb-1" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="px-4 py-2 font-manrope font-bold text-sm text-slate-600 hover:bg-slate-50 rounded-lg transition-all">Login</button>
+<button class="px-6 py-2 cta-gradient text-white font-manrope font-bold text-sm rounded-full shadow-md hover:scale-95 transition-transform">Register</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-6 mb-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-8">
+<h1 class="font-headline text-6xl md:text-7xl font-extrabold tracking-tight text-on-surface mb-6">
+                        Pojďme společně <br/>
+<span class="text-primary">postavit</span> váš úspěch.
+                    </h1>
+<p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+                        Máte dotaz k našim kurzům nebo hledáte individuální přístup? Jsme tu, abychom vám pomohli zvládnout i ty nejtěžší akademické výzvy.
+                    </p>
+</div>
+<div class="lg:col-span-4 hidden lg:block">
+<div class="bg-surface-container-low rounded-xl p-6 border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary mb-4" style="font-size: 40px;">school</span>
+<p class="font-headline font-bold text-lg text-on-surface">98% úspěšnost</p>
+<p class="text-on-surface-variant text-sm">Našich studentů se dostane na svou vysněnou školu hned napoprvé.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Grid -->
+<section class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Contact Form Block -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-xl p-8 md:p-12">
+<h2 class="font-headline text-3xl font-bold mb-8">Napište nám</h2>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block font-label text-sm font-semibold text-on-surface-variant px-1">Jméno</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline-variant" placeholder="Jan Novák" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block font-label text-sm font-semibold text-on-surface-variant px-1">E-mail</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline-variant" placeholder="jan.novak@email.cz" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label text-sm font-semibold text-on-surface-variant px-1">Zpráva</label>
+<textarea class="w-full bg-surface-container-lowest border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline-variant resize-none" placeholder="Jak vám můžeme pomoci?" rows="5"></textarea>
+</div>
+<button class="w-full md:w-auto px-10 py-4 cta-gradient text-white font-manrope font-bold rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-[1.02] active:scale-95" type="submit">
+                        Odeslat zprávu
+                    </button>
+</form>
+</div>
+<!-- Info Sidebar -->
+<div class="lg:col-span-5 space-y-8">
+<!-- Tutoring Promo -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-9xl" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4 relative z-10">Individuální doučování 1-on-1</h3>
+<p class="text-on-surface-variant mb-8 relative z-10 leading-relaxed">
+                        Potřebujete zrychlit svůj pokrok? Naši lektoři se budou věnovat pouze vám a vašim specifickým potřebám.
+                    </p>
+<ul class="space-y-3 mb-8 relative z-10">
+<li class="flex items-center gap-3 text-sm font-medium">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Flexibilní termíny
+                        </li>
+<li class="flex items-center gap-3 text-sm font-medium">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Vlastní tempo výuky
+                        </li>
+<li class="flex items-center gap-3 text-sm font-medium">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Zaměření na slabé stránky
+                        </li>
+</ul>
+<a class="inline-flex items-center justify-center w-full py-4 bg-primary-fixed text-on-primary-fixed font-manrope font-extrabold rounded-full hover:bg-primary hover:text-white transition-all" href="#">
+                        Chci doučování
+                    </a>
+</div>
+<!-- Social & Contact Details -->
+<div class="bg-surface-container-low rounded-xl p-8">
+<h3 class="font-headline text-xl font-bold mb-6">Kde nás najdete</h3>
+<div class="space-y-6">
+<a class="flex items-center gap-4 group" href="mailto:ahoj@academic-architect.cz">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">E-mail</p>
+<p class="font-semibold text-on-surface">ahoj@academic-architect.cz</p>
+</div>
+</a>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">share</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-2">Sociální sítě</p>
+<div class="flex gap-3">
+<a class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-slate-700 hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-size: 18px;">public</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-slate-700 hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-size: 18px;">video_library</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-slate-700 hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-size: 18px;">photo_camera</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Preview Section -->
+<section class="max-w-7xl mx-auto px-6 mt-24">
+<div class="bg-surface-container-low rounded-2xl overflow-hidden p-8 md:p-16 flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/2">
+<img alt="Náš tým" class="rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" data-alt="Modern office environment with a group of young professionals smiling and collaborating together in a bright sunlit library setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZmG7qenVOCSRiTYCqHGQH2RdbZoiCSjAkm0RThSWo0w5xxRAYmNmua7q9UpgEXCKFyzJFcpAm8kAv-yt2dUTE3o-Gx5CZWJf1thsOcfPwVFrppGwrwiiwqenUsFwYn0OUpHx4rxp8iqJpYPQEXGj9fUu_XFjbVl5yB8i5WwQPA05dhmki7GCBUMrjAVn9kUwkgEBfpnHYIwzDRqMlkf4iTfRE0qm8XlDzr4YuM0VPjgactEcHxWPbbnW5D2IoaCNAMWCorAj-XYQ"/>
+</div>
+<div class="w-full md:w-1/2">
+<span class="inline-block px-4 py-1 bg-tertiary/10 text-tertiary font-bold text-xs rounded-full mb-4 uppercase tracking-widest">Osobní přístup</span>
+<h2 class="font-headline text-4xl font-extrabold mb-6 leading-tight">Vždy na vaší straně.</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+                        Naši lektoři nejsou jen učitelé. Jsou to mentoři, kteří sami prošli stejnou cestou. Rozumíme vašemu stresu a víme, jak ho proměnit v sebevědomí.
+                    </p>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-3">
+<div class="w-12 h-12 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
+<img alt="Avatar 1" data-alt="Portrait of a young smiling professional woman with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh2kFgAnPxeQjsWc9gEFmtw19SHwLKj5HGzmip9Ihh_Q0D3eWHIiHAyWwczCJm8X-Q-KKZWlfZ75DZFXQwyY5K6XZAyc6a8Q3Q8tWPWsh0XB1idbCbKhaiZZPtYyWfGWrfKvBTeWfwq8QQdz3fmbMT2gZIQC8VUEjrAxzxH1tyDeDQy-Z35MeElRcxwMVJFXLAJ0BrJLvuCsCdgv_z78cqPpG00GGY6ckF-PCKP0zdsNAzSJHPZd8QBa1wCH0Ee-5QwdPFD2UIGAs"/>
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
+<img alt="Avatar 2" data-alt="Close up portrait of a young man with a friendly expression in business casual attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEYtyas-2sNFOA3dFZMaCl6ZkaEDSEXcFyzAdDI03NLMWNrKyCfelN7TqAEB09umu7GZlGLL_nrSCWXE0o_0GaCJJNCUA3lg2DpzO-el_FFWT8ka0-Hal77sEBWZ5vMpvdASWIfRmlEuqthS1MZLUjL57lLpfK7XvM0N4UikZ7L3etBvS9NdrQDYaHmRNu6-ppSHl4Hxu-Q5EBwdAUnBseltY_OFLNorfCU_-5iGzVzPdwGlEpM5erfho4zeS4S7lW2B4hdEnPUyw"/>
+</div>
+<div class="w-12 h-12 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
+<img alt="Avatar 3" data-alt="Studio portrait of a young female academic with long hair and a soft smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGGQzZ2MuL8Mp3FwRuTsG8HFjuGOSkDbl_aEfgAuzJw0Nc98Uscu2T5P5cv-vK1o_RT_shiLYBPfC9Y4asJBQz4oAj089xjAlEKtPjBWOWkq1Cjthiun-SNlYViIdycd6DmD7VPeFABcmUcsTxamhCFR_vYbBfvWmufDgYU9kx4FOxWsYQQXVgW6DphPLF_hpkMbZrMRUeYDs9zN0Ggynb5D7przQUvvZgtEvSbcRoeM8OjBPYxoWCTf7_aPFHp8RdzHXDhiqSD2U"/>
+</div>
+</div>
+<p class="font-bold text-on-surface">+15 dalších mentorů</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full py-12 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto px-6 font-inter text-sm leading-relaxed">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-bold text-slate-900 dark:text-slate-50 mb-4">Academic Architect</div>
+<p class="text-slate-500 dark:text-slate-400">Prémiová vzdělávací platforma pro ambiciózní studenty.</p>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-50 mb-4">Navigace</h4>
+<ul class="space-y-2 text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors" href="#">Courses</a></li>
+<li><a class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors" href="#">Exercises</a></li>
+<li><a class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors" href="#">Pricing</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-50 mb-4">Podpora</h4>
+<ul class="space-y-2 text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors" href="#">Help Center</a></li>
+<li><a class="text-blue-600 dark:text-blue-400 font-semibold" href="#">Contact Support</a></li>
+<li><a class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-slate-50 mb-4">Newsletter</h4>
+<div class="flex gap-2">
+<input class="bg-white dark:bg-slate-900 border-none rounded-lg px-3 py-2 text-xs w-full focus:ring-1 focus:ring-primary" placeholder="Váš e-mail" type="text"/>
+<button class="bg-primary text-white p-2 rounded-lg">
+<span class="material-symbols-outlined" style="font-size: 16px;">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 text-center text-slate-500 dark:text-slate-400 text-xs">
+            © 2024 Academic Architect. All rights reserved.
+        </div>
+</footer>
+</body></html>

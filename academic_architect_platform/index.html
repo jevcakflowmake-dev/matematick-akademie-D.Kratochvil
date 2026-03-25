@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="light" lang="cs"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-surface": "#2e3132",
+              "on-tertiary-fixed-variant": "#005320",
+              "on-primary-container": "#ffffff",
+              "secondary-fixed": "#ffdbc8",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#edeeef",
+              "surface-tint": "#005bc0",
+              "surface-dim": "#d9dadb",
+              "surface-bright": "#f8f9fa",
+              "tertiary-container": "#008939",
+              "primary-fixed-dim": "#adc7ff",
+              "secondary-fixed-dim": "#ffb68b",
+              "tertiary-fixed": "#89fa9b",
+              "surface-variant": "#e1e3e4",
+              "error-container": "#ffdad6",
+              "secondary-container": "#fb7800",
+              "inverse-on-surface": "#f0f1f2",
+              "on-surface": "#191c1d",
+              "on-error-container": "#93000a",
+              "on-secondary": "#ffffff",
+              "surface": "#f8f9fa",
+              "error": "#ba1a1a",
+              "on-primary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#004493",
+              "on-secondary-fixed-variant": "#753400",
+              "on-tertiary-fixed": "#002108",
+              "on-error": "#ffffff",
+              "primary": "#005bbf",
+              "inverse-primary": "#adc7ff",
+              "on-background": "#191c1d",
+              "tertiary-fixed-dim": "#6ddd81",
+              "on-secondary-container": "#592600",
+              "tertiary": "#006d2c",
+              "background": "#f8f9fa",
+              "primary-fixed": "#d8e2ff",
+              "on-primary-fixed": "#001a41",
+              "outline": "#727785",
+              "surface-container-low": "#f3f4f5",
+              "surface-container-highest": "#e1e3e4",
+              "on-tertiary-container": "#ffffff",
+              "outline-variant": "#c1c6d6",
+              "surface-container-high": "#e7e8e9",
+              "secondary": "#994700",
+              "on-secondary-fixed": "#321200",
+              "primary-container": "#1a73e8",
+              "on-surface-variant": "#414754"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(24px);
+      }
+      .cta-gradient {
+        background: linear-gradient(135deg, #994700 0%, #fb7800 100%);
+      }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}[type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select{-webkit-appearance:none;appearance:none;background-color:#fff;border-color:#6b7280;border-width:1px;border-radius:0px;padding-top:0.5rem;padding-right:0.75rem;padding-bottom:0.5rem;padding-left:0.75rem;font-size:1rem;line-height:1.5rem;--tw-shadow:0 0 #0000;}[type='text']:focus, input:where(:not([type])):focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);border-color:#2563eb}input::placeholder,textarea::placeholder{color:#6b7280;opacity:1}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-date-and-time-value{min-height:1.5em;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit,::-webkit-datetime-edit-year-field,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute-field,::-webkit-datetime-edit-second-field,::-webkit-datetime-edit-millisecond-field,::-webkit-datetime-edit-meridiem-field{padding-top:0;padding-bottom:0}select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");background-position:right 0.5rem center;background-repeat:no-repeat;background-size:1.5em 1.5em;padding-right:2.5rem;print-color-adjust:exact}[multiple],[size]:where(select:not([size="1"])){background-image:initial;background-position:initial;background-repeat:unset;background-size:initial;padding-right:0.75rem;print-color-adjust:unset}[type='checkbox'],[type='radio']{-webkit-appearance:none;appearance:none;padding:0;print-color-adjust:exact;display:inline-block;vertical-align:middle;background-origin:border-box;-webkit-user-select:none;user-select:none;flex-shrink:0;height:1rem;width:1rem;color:#2563eb;background-color:#fff;border-color:#6b7280;border-width:1px;--tw-shadow:0 0 #0000}[type='checkbox']{border-radius:0px}[type='radio']{border-radius:100%}[type='checkbox']:focus,[type='radio']:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:2px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}[type='checkbox']:checked,[type='radio']:checked{border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat}[type='checkbox']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='checkbox']:checked{-webkit-appearance:auto;appearance:auto}}[type='radio']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='radio']:checked{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:checked:hover,[type='checkbox']:checked:focus,[type='radio']:checked:hover,[type='radio']:checked:focus{border-color:transparent;background-color:currentColor}[type='checkbox']:indeterminate{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat;}@media (forced-colors: active) {[type='checkbox']:indeterminate{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:indeterminate:hover,[type='checkbox']:indeterminate:focus{border-color:transparent;background-color:currentColor}[type='file']{background:unset;border-color:inherit;border-width:0;border-radius:0;padding:0;font-size:unset;line-height:inherit}[type='file']:focus{outline:1px solid ButtonText;outline:1px auto -webkit-focus-ring-color}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.-bottom-10{bottom:-2.5rem}.-left-10{left:-2.5rem}.-right-6{right:-1.5rem}.-top-6{top:-1.5rem}.bottom-6{bottom:1.5rem}.left-6{left:1.5rem}.right-0{right:0px}.right-6{right:1.5rem}.top-0{top:0px}.-z-10{z-index:-10}.z-10{z-index:10}.z-50{z-index:50}.col-span-1{grid-column:span 1 / span 1}.mx-auto{margin-left:auto;margin-right:auto}.-mr-48{margin-right:-12rem}.-mt-48{margin-top:-12rem}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-16{margin-bottom:4rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-10{margin-top:2.5rem}.mt-12{margin-top:3rem}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.aspect-video{aspect-ratio:16 / 9}.h-12{height:3rem}.h-20{height:5rem}.h-3{height:0.75rem}.h-32{height:8rem}.h-48{height:12rem}.h-96{height:24rem}.h-\[400px\]{height:400px}.h-full{height:100%}.w-12{width:3rem}.w-20{width:5rem}.w-3{width:0.75rem}.w-32{width:8rem}.w-48{width:12rem}.w-96{width:24rem}.w-full{width:100%}.w-px{width:1px}.max-w-2xl{max-width:42rem}.max-w-7xl{max-width:80rem}.max-w-xl{max-width:36rem}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-16{gap:4rem}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-3xl{border-radius:1.5rem}.rounded-\[2rem\]{border-radius:2rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b-2{border-bottom-width:2px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-blue-700{--tw-border-opacity:1;border-color:rgb(29 78 216 / var(--tw-border-opacity, 1))}.border-primary{--tw-border-opacity:1;border-color:rgb(0 91 191 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-white\/20{border-color:rgb(255 255 255 / 0.2)}.border-white\/30{border-color:rgb(255 255 255 / 0.3)}.bg-on-surface{--tw-bg-opacity:1;background-color:rgb(25 28 29 / var(--tw-bg-opacity, 1))}.bg-outline-variant{--tw-bg-opacity:1;background-color:rgb(193 198 214 / var(--tw-bg-opacity, 1))}.bg-outline-variant\/30{background-color:rgb(193 198 214 / 0.3)}.bg-primary{--tw-bg-opacity:1;background-color:rgb(0 91 191 / var(--tw-bg-opacity, 1))}.bg-primary-container{--tw-bg-opacity:1;background-color:rgb(26 115 232 / var(--tw-bg-opacity, 1))}.bg-primary-fixed{--tw-bg-opacity:1;background-color:rgb(216 226 255 / var(--tw-bg-opacity, 1))}.bg-primary\/10{background-color:rgb(0 91 191 / 0.1)}.bg-primary\/20{background-color:rgb(0 91 191 / 0.2)}.bg-secondary\/10{background-color:rgb(153 71 0 / 0.1)}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-surface{--tw-bg-opacity:1;background-color:rgb(248 249 250 / var(--tw-bg-opacity, 1))}.bg-surface-container-low{--tw-bg-opacity:1;background-color:rgb(243 244 245 / var(--tw-bg-opacity, 1))}.bg-surface-container-lowest{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-surface-container-lowest\/20{background-color:rgb(255 255 255 / 0.2)}.bg-tertiary{--tw-bg-opacity:1;background-color:rgb(0 109 44 / var(--tw-bg-opacity, 1))}.bg-white\/10{background-color:rgb(255 255 255 / 0.1)}.object-cover{object-fit:cover}.p-12{padding:3rem}.p-4{padding:1rem}.p-8{padding:2rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-24{padding-top:6rem;padding-bottom:6rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.pb-1{padding-bottom:0.25rem}.pt-20{padding-top:5rem}.pt-8{padding-top:2rem}.text-center{text-align:center}.font-body{font-family:Inter}.font-headline{font-family:Manrope}.font-label{font-family:Inter}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-\[1\.1\]{line-height:1.1}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-tighter{letter-spacing:-0.05em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.text-on-primary-fixed{--tw-text-opacity:1;color:rgb(0 26 65 / var(--tw-text-opacity, 1))}.text-on-surface{--tw-text-opacity:1;color:rgb(25 28 29 / var(--tw-text-opacity, 1))}.text-on-surface-variant{--tw-text-opacity:1;color:rgb(65 71 84 / var(--tw-text-opacity, 1))}.text-primary{--tw-text-opacity:1;color:rgb(0 91 191 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-surface{--tw-text-opacity:1;color:rgb(248 249 250 / var(--tw-text-opacity, 1))}.text-surface-variant{--tw-text-opacity:1;color:rgb(225 227 228 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.opacity-60{opacity:0.6}.mix-blend-multiply{mix-blend-mode:multiply}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-secondary\/20{--tw-shadow-color:rgb(153 71 0 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.blur-3xl{--tw-blur:blur(64px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-\[100px\]{--tw-blur:blur(100px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-lg{--tw-backdrop-blur:blur(16px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-150{transition-duration:150ms}.selection\:bg-primary-fixed *::selection{--tw-bg-opacity:1;background-color:rgb(216 226 255 / var(--tw-bg-opacity, 1))}.selection\:bg-primary-fixed::selection{--tw-bg-opacity:1;background-color:rgb(216 226 255 / var(--tw-bg-opacity, 1))}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-white:hover{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity, 1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:bg-surface-container-high:hover{--tw-bg-opacity:1;background-color:rgb(231 232 233 / var(--tw-bg-opacity, 1))}.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.hover\:text-orange-600:hover{--tw-text-opacity:1;color:rgb(234 88 12 / var(--tw-text-opacity, 1))}.hover\:text-slate-900:hover{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.dark\:bg-slate-950:is(.dark *){--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}@media (min-width: 640px){.sm\:w-auto{width:auto}.sm\:flex-row{flex-direction:row}}@media (min-width: 768px){.md\:col-span-1{grid-column:span 1 / span 1}.md\:block{display:block}.md\:flex{display:flex}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}}@media (min-width: 1024px){.lg\:ml-8{margin-left:2rem}.lg\:h-auto{height:auto}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:p-20{padding:5rem}.lg\:py-32{padding-top:8rem;padding-bottom:8rem}.lg\:text-5xl{font-size:3rem;line-height:1}.lg\:text-7xl{font-size:4.5rem;line-height:1}}</style></head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed" data-mode="connect">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-sm">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+<div class="text-2xl font-extrabold tracking-tighter text-slate-900">Academic Architect</div>
+<div class="hidden md:flex items-center space-gap-8 gap-8">
+<a class="font-manrope font-bold text-sm tracking-tight text-blue-700 border-b-2 border-blue-700 pb-1" href="#">Courses</a>
+<a class="font-manrope font-bold text-sm tracking-tight text-slate-600 hover:text-slate-900 transition-colors" href="#">Exercises</a>
+<a class="font-manrope font-bold text-sm tracking-tight text-slate-600 hover:text-slate-900 transition-colors" href="#">Pricing</a>
+<a class="font-manrope font-bold text-sm tracking-tight text-slate-600 hover:text-slate-900 transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-5 py-2 text-sm font-bold text-slate-600 hover:bg-slate-50 rounded-lg transition-all">Login</button>
+<button class="px-6 py-2.5 text-sm font-bold text-white bg-primary rounded-full hover:scale-105 active:scale-95 transition-all duration-150">Register</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-surface py-20 lg:py-32">
+<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative z-10">
+<span class="inline-block py-1 px-4 rounded-full bg-primary-fixed text-on-primary-fixed font-label text-sm font-semibold mb-6">Úspěšné přijímačky 2024</span>
+<h1 class="font-headline text-5xl lg:text-7xl font-extrabold text-on-surface leading-[1.1] tracking-tight mb-8">
+                        Příprava na přijímací zkoušky pro 9. třídu
+                    </h1>
+<p class="text-xl text-on-surface-variant leading-relaxed mb-10 max-w-xl">
+                        Komplexní přípravný kurz z matematiky a češtiny, který vás zbaví stresu a připraví na ostré testy CERMAT.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="cta-gradient text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg shadow-secondary/20 hover:scale-105 transition-transform flex items-center justify-center gap-2">
+                            Chci začít
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-surface-container-low text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">play_circle</span>
+                            Ukázková lekce zdarma
+                        </button>
+</div>
+</div>
+<div class="relative lg:ml-8">
+<!-- Asymmetrical Video Placeholder -->
+<div class="relative aspect-video rounded-xl overflow-hidden shadow-2xl bg-primary-container group">
+<img class="w-full h-full object-cover opacity-60" data-alt="Modern bright classroom with wooden desks and students focused on their work, professional photography, soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB-QRolvTLYKHalB_yrLnlRgxvp44AnCM59hH8ukYnv8u-Qe2ei5rjcMwkc_T4E6JRv1Mc0clmufq5j5fH2kSjZi4MdyWF0RSoTURfMtgm_HrXVC7HFJa0EqvG5cANZV16-zcIwlM_TpHKKNHjWX8tgrKr2JfNepKFxHI0QDx-VCKCnh0in7Qjc9Hob8aTkzXOMSeQS1LrqhQFFq5vEyn6GHMhCxcogXphDWSeczFhmQ6g7930pGxSRZAKYPEAwXJcd2NyXu6ZBqU"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-20 h-20 rounded-full bg-surface-container-lowest/20 backdrop-blur-md flex items-center justify-center border border-white/30 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+<div class="absolute bottom-6 left-6 right-6">
+<div class="bg-white/10 backdrop-blur-lg border border-white/20 p-4 rounded-lg">
+<p class="text-white font-headline font-bold text-sm tracking-wide">VIDEO: JAK NA GEOMETRII BEZ CHYB</p>
+</div>
+</div>
+</div>
+<!-- Decorative element -->
+<div class="absolute -top-6 -right-6 w-32 h-32 bg-secondary/10 rounded-full blur-3xl -z-10"></div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+</section>
+<!-- Benefits Section: Pro koho je kurz určen -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-headline text-4xl font-extrabold text-on-surface mb-6">Pro koho je kurz určen?</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            Naše metodika je navržena tak, aby pomohla každému studentovi, bez ohledu na jeho aktuální úroveň. Budujeme pevné základy i pokročilé strategie.
+                        </p>
+</div>
+<div class="hidden md:block">
+<div class="flex gap-2 mb-4">
+<div class="w-3 h-3 rounded-full bg-tertiary"></div>
+<div class="w-3 h-3 rounded-full bg-outline-variant"></div>
+<div class="w-3 h-3 rounded-full bg-outline-variant"></div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Benefit Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border-l-4 border-primary transition-all hover:bg-white shadow-sm">
+<div class="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">school</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-4">Budoucí gymnazisté</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Pro ty, kteří míří na prestižní školy a potřebují excelovat v nejtěžších úlohách z matematické logiky.
+                        </p>
+</div>
+<!-- Benefit Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border-l-4 border-primary transition-all hover:bg-white shadow-sm">
+<div class="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">psychology</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-4">Studenti s trémou</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Učíme techniky zvládání stresu a strategii práce s časem, abyste u zkoušky nezpanikařili.
+                        </p>
+</div>
+<!-- Benefit Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border-l-4 border-primary transition-all hover:bg-white shadow-sm">
+<div class="w-12 h-12 bg-primary-fixed rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">auto_graph</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-4">Věční bojovníci s ČJ</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                            Rozkládáme složitou gramatiku a větný rozbor do srozumitelných vzorců, které si snadno zapamatujete.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section: O mně -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<div class="bg-surface-container-low rounded-[2rem] overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2">
+<div class="relative h-[400px] lg:h-auto">
+<img class="w-full h-full object-cover" data-alt="Friendly professional male tutor in his 30s at a desk with a laptop, explaining a lesson in a modern classroom setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNAP0H2Zlxl2bBYhwP2QDXty4C8IXS9vAYRkgNzk7WKbfJdkO5i8yIWQon-Q0FLZJ0r6UiUGZ2uajcJ09oftpLKTmQzfSBJZ572lSwHisEWYtu1uleeFG4e3W-v-9gVA1aUgw1UV7hzRwAgxPvIHU1EzZSNBq-GbtADsk25Y92mrXHB4Ijy-sbjrnIKr1zpQpyJ03BzI6w3N9XahcCRnKbtBl__1kUesBrjPJuCBxrDiw_rfUyFWdxqoroSN-Q_G54NQvjqZoMLK4"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+<div class="p-12 lg:p-20 flex flex-col justify-center">
+<h2 class="font-headline text-4xl font-extrabold text-on-surface mb-8">O mně</h2>
+<p class="text-xl text-on-surface leading-relaxed mb-6 font-medium">
+                                "Věřím, že každý student má potenciál uspět, pokud dostane správné nástroje a vedení."
+                            </p>
+<div class="space-y-4 text-on-surface-variant leading-relaxed">
+<p class="">
+                                    Jmenuji se Mgr. Daniel Kratochvíl a přípravě na přijímací zkoušky se věnuji přes 5 let. Za tu dobu mými kurzy prošlo více než 300 studentů, z nichž 94 % uspělo na své prioritní škole.
+                                </p>
+<p class="">
+                                    Můj přístup není o biflování, ale o pochopení principů. Zakládám si na trpělivosti, jasném vysvětlování a profesionálním přístupu, který studentům dodává potřebné sebevědomí.
+                                </p>
+</div>
+<div class="mt-10 flex items-center gap-6">
+<div class="flex flex-col">
+<span class="font-headline font-extrabold text-3xl text-primary">5+</span>
+<span class="text-sm font-label text-on-surface-variant uppercase tracking-wider">Let praxe</span>
+</div>
+<div class="w-px h-12 bg-outline-variant/30"></div>
+<div class="flex flex-col">
+<span class="font-headline font-extrabold text-3xl text-primary">94%</span>
+<span class="text-sm font-label text-on-surface-variant uppercase tracking-wider">Úspěšnost</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter/CTA Section -->
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-6">
+<div class="bg-on-surface text-surface rounded-3xl p-12 lg:p-20 text-center relative overflow-hidden">
+<!-- Background Accent -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[100px] -mr-48 -mt-48"></div>
+<h2 class="font-headline text-4xl lg:text-5xl font-extrabold mb-8 relative z-10">Jste připraveni na další krok?</h2>
+<p class="text-surface-variant text-xl max-w-2xl mx-auto mb-12 relative z-10">
+                        Získejte přístup k ucelenému kurzu, stovkám cvičných příkladů a osobní podpoře. Přihlášky na jarní termín jsou právě otevřeny.
+                    </p>
+<div class="flex flex-col sm:flex-row justify-center items-center gap-6 relative z-10">
+<button class="cta-gradient text-white px-10 py-5 rounded-full font-bold text-xl shadow-2xl hover:scale-105 transition-transform w-full sm:w-auto">
+                            Zapsat se do kurzu
+                        </button>
+<a class="text-white font-bold border-b-2 border-white/30 hover:border-white transition-colors py-2" href="#">
+                            Zobrazit osnovu kurzu
+                        </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 border-t border-slate-200">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto px-6">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-bold text-slate-900 mb-6">Academic Architect</div>
+<p class="font-inter text-sm leading-relaxed text-slate-500">
+                    Profesionální příprava na budoucnost. Učíme moderně, efektivně a s výsledky.
+                </p>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 mb-6 text-sm uppercase tracking-widest">Kurzy</h4>
+<ul class="space-y-4">
+<li><a class="font-inter text-sm text-slate-500 hover:text-orange-600 transition-colors" href="#">Matematika 9</a></li>
+<li><a class="font-inter text-sm text-slate-500 hover:text-orange-600 transition-colors" href="#">Český Jazyk 9</a></li>
+<li><a class="font-inter text-sm text-slate-500 hover:text-orange-600 transition-colors" href="#">VIP Intenziv</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 mb-6 text-sm uppercase tracking-widest">Podpora</h4>
+<ul class="space-y-4">
+<li><a class="font-inter text-sm text-slate-500 hover:text-orange-600 transition-colors" href="#">Help Center</a></li>
+<li><a class="font-inter text-sm text-slate-500 hover:text-orange-600 transition-colors" href="#">Contact Support</a></li>
+<li><a class="font-inter text-sm text-slate-500 hover:text-orange-600 transition-colors" href="#">Často kladené dotazy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 mb-6 text-sm uppercase tracking-widest">Právní info</h4>
+<ul class="space-y-4">
+<li><a class="font-inter text-sm text-slate-500 hover:text-orange-600 transition-colors" href="#">Terms of Service</a></li>
+<li><a class="font-inter text-sm text-slate-500 hover:text-orange-600 transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-200">
+<p class="font-inter text-sm leading-relaxed text-slate-500 text-center">
+                © 2024 Academic Architect. All rights reserved.
+            </p>
+</div>
+</footer>
+</body></html>
